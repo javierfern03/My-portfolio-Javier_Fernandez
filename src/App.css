@@ -1,0 +1,109 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500&display=swap"); */
+
+ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+}
+html {
+  font-family: "Raleway", sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.navbar {
+  /* position: absolute; */
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 3rem;
+  font-size: 1.2rem;
+  top: 0;
+  left: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+/* .card__img {
+  width: 400px;
+  height: 400px;
+} */
+/* html {
+  background: #181818;
+  color: white;
+} */
+img {
+  width: 100%;
+}
+
+.header {
+  min-height: 100vh;
+  max-height: 110vh;
+  /* box-shadow: 1px 1px 10px 1px black; */
+  overflow: hidden;
+  position: relative;
+  /* display: flex;
+  align-items: center; */
+}
+
+.skills__container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background: #181818;
+  color: #5c5b5b;
+}
+.skills__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img__profile {
+  width: auto;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar__ul {
+  display: flex;
+  gap: 1rem;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 300px;
+}
+
+.about {
+  min-width: 100%;
+  padding: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  text-align: center;
+  background: #181818;
+  color: white;
+}
+
+.about__container {
+  margin: 1rem 10rem;
+}
+.about__title {
+  font-size: 4rem;
+}
+.about__text {
+  font-size: 1.4rem;
+}
