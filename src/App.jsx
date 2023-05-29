@@ -46,7 +46,7 @@ function App() {
             <h2 className="about__title">About Me</h2>
 
             <span className="about__span">saber mas</span>
-            <span className="about__span about__span--quot">"si puedes imaginarlo puedes programarlo 🕊️"</span>
+            <span className="about__span about__span--quot">&lsquo;si puedes imaginarlo puedes programarlo 🕊️&lsquo;</span>
 
             <p className="about__text">Hola soy Javier Fernandez y disfruto creando efectos de interfaz de usuario, animaciones y
               desarrollando experiencias de usuario intuitivas y dinámicas. Me gusta crear sitios web responsivos
@@ -120,7 +120,7 @@ function App() {
 
         {/*   CONTACT  */}
 
-        <section className="section contac">
+        <section className="section contact">
           <div className="contact__header">
             <h2 className="contact__title">LETS WORK TOGETHER</h2>
             {/* <span className="contact__span">LETS WORK TOGETHER</span> */}
@@ -129,24 +129,24 @@ function App() {
           <div className="contact__form-container">
             <form className="form" action="">
               <div className="form__col">
-                <label className="label" htmlFor="">WHAT&lsquo;S YOUR NAME?</label>
-                <input className="field" type="text" />
-                <h5>01</h5>
+                <label className="label" htmlFor="name">WHAT&lsquo;S YOUR NAME?</label>
+                <input className="field" type="text" id="form-name" name="name" required placeholder="John Doe *" />
+                <h5 className="serif">01</h5>
               </div>
               <div className="form__col">
-                <label className="label" htmlFor="">WHAT&lsquo;S YOUR EMAIL?</label>
-                <input className="field" type="text" />
-                <h5>02</h5>
+                <label className="label" htmlFor="email">WHAT&lsquo;S YOUR EMAIL?</label>
+                <input className="field" type="text" id="form-email" name="email" required placeholder="john@doe.com" />
+                <h5 className="serif">02</h5>
               </div>
               <div className="form__col">
                 <label className="label" htmlFor="">WHAT SERVICES ARE YOU LOOKING FOR?</label>
-                <input className="field" type="text" />
-                <h5>03</h5>
+                <input className="field" type="text" id="form-email" name="email" required placeholder="john@doe.com" />
+                <h5 className="serif">03</h5>
               </div>
               <div className="form__col">
-                <label className="label" htmlFor="">YOUR MESSAGE</label>
-                <textarea className="field" name="" id="" rows="4"></textarea>
-                <h5>04</h5>
+                <label className="label" htmlFor="message">YOUR MESSAGE</label>
+                <textarea className="field" name="message" id="form-message" rows="4" placeholder="Hey there, can you help me with ... *"></textarea>
+                <h5 className="serif">04</h5>
               </div>
 
             </form>
@@ -158,10 +158,10 @@ function App() {
             {/* <div className="stripe"></div> */}
 
             <h3 className="foooter__contact">SEND US AN EMAIL</h3>
-            <div>
+            <div className="btn__container">
               <a href="">
                 <span className="footer__email">jf2876430@gmail.com</span>
-                <div className=""></div>
+                <div className="btn__fill"></div>
                 {/* TODO: hacer el subrayado */}
               </a>
             </div>
@@ -182,7 +182,8 @@ function App() {
               <ul className="footer__social__list">
                 <h4>social</h4>
                 <li>linkeding</li>
-                <li>+58 0424 8450633</li>
+                <li>Javier Fernandez</li>
+                <li>+58 04248450633</li>
               </ul>
             </div>
 
