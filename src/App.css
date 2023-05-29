@@ -68,12 +68,36 @@ img {
   object-fit: cover;
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
 }
 
-.container-sectionOne {
-  min-height: 110vh;
+.header__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  right: 50%;
+  transform: translateX(50%);
 }
+
+.title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.title--span {
+  font-size: 2rem;
+}
+.btn__header {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+}
+
+/*     ABOUT ME    */
 
 .about {
   min-width: 100%;
@@ -219,9 +243,6 @@ img {
 }
 
 /*   CONTACT   */
-
-.contact {
-}
 
 .contact__form-container {
   max-width: 82%;
