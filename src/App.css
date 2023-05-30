@@ -6,16 +6,25 @@ ul {
   margin: 0;
   padding: 0;
 }
+
 html {
   font-family: "Raleway", sans-serif;
   scroll-behavior: smooth;
 }
+
 body {
   background-color: #eeeeee;
 }
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar {
   display: none;
+} */
+
+.viewport {
+  margin: 0 0 0 0;
+  width: 100vw;
+  overflow-x: hidden;
+  position: fixed;
 }
 
 textarea {
