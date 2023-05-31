@@ -15,17 +15,27 @@ html {
 body {
   background-color: #eeeeee;
 }
+main {
+  font-size: 16px;
+}
 
 /* ::-webkit-scrollbar {
   display: none;
 } */
 
-.viewport {
+#GScroll {
   margin: 0 0 0 0;
   width: 100vw;
   overflow-x: hidden;
   position: fixed;
 }
+
+/* .viewport {
+  margin: 0 0 0 0;
+  width: 100vw;
+  overflow-x: hidden;
+  position: fixed;
+} */
 
 textarea {
   resize: none;
