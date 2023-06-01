@@ -3,7 +3,7 @@ function Icon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="300"
+      width="250"
       height="121"
       viewBox="0 0 300 121"
     >
