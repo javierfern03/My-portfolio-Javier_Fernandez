@@ -9,81 +9,35 @@ import Arrow from "./icons/Arrow"
 import Hola from "./icons/Hola"
 import SliderComponent from "./components/SliderComponent"
 
-import animateCss from "animate.css"
-import LocomotiveScroll from 'locomotive-scroll';
-import { useLayoutEffect } from "react"
-
-// import { gsap } from 'gsap';
-// import { ScrollTrigger } from 'gsap/ScrollTrigger.js';
-// // import SmoothScroll from "./SmoothScroll";
-// import GScroll from "@grcmichael/gscroll"
-// import { useLayoutEffect } from "react"
-
-// gsap.registerPlugin(ScrollTrigger)
-
-
-
-
-
-
+// import animateCss from "animate.css"
+import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
+import { useRef } from "react"
 
 
 function App() {
-
-
-  // useLayoutEffect(() => {
-
-  //   const scroll = new GScroll(
-  //     '#GScroll',
-  //     0.5,
-  //     () => { ScrollTrigger.update() }
-  //   );
-
-  //   scroll.init();
-  //   scroll.wheel();
-
-  //   const scroller = document.getElementById('GScroll')
-  //   ScrollTrigger.defaults({
-  //     scroller: scroller
-  //   })
-
-  //   ScrollTrigger.scrollerProxy(scroller, {
-  //     scrollTop(value) {
-  //       if (arguments.length) {
-  //         scroll.current = -value // setter
-  //       }
-  //       return -scroll.current // getter
-  //     },
-  //     getBoundingClientRect() {
-  //       return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight }
-  //     }
-  //   });
-
-
-  //   window.addEventListener('resize', () => {
-  //     scroll.resize()
-  //   })
-
-
-  // }, [])
-
-  useLayoutEffect(() => {
-    const scroll = new LocomotiveScroll({
-      el: document.querySelector('[data-scroll-container]'),
-      smooth: true
-    });
-
-  }, [])
-
-
+  const containerRef = useRef(null)
 
   return (
-    // <SmoothScroll>
-    <main id="">
-      <div data-scroll-container id="data-scroll-container">
 
-
-        <header className="header">
+    <LocomotiveScrollProvider
+      options={
+        {
+          smooth: true,
+          // ... all available Locomotive Scroll instance options 
+        }
+      }
+      watch={
+        [
+          //..all the dependencies you want to watch to update the scroll.
+          //  Basicaly, you would want to watch page/location changes
+          //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
+        ]
+      }
+      containerRef={containerRef}
+    >
+      <main data-scroll-container ref={containerRef}>
+        {/* data-scroll-container  */}
+        <header data-scroll-section data-scroll-speed="3" data-scroll-position="top" className="header">
           <nav className="navbar">
 
             <div className="navbar__div">
@@ -92,9 +46,9 @@ function App() {
             </div>
 
             <ul className="navbar__ul">
-              <li className="navbar__li"><a href="#home">HOME</a></li>
+              <li className="navbar__li"><a href="">HOME</a></li>
               <li className="navbar__li"><a href="#about-me">ABOUT ME</a></li>
-              <li className="navbar__li"><a href="#proyects">PROYECTS</a></li>
+              <li className="navbar__li"><a id="target" href="">PROYECTS</a></li>
               <li className="navbar__li"><a href="#contact">CONTACT</a></li>
             </ul>
           </nav>
@@ -102,7 +56,10 @@ function App() {
           {/* <img className="img__profile" src='/arunbeatnik_young_man_wearing_overshirt_or_shirt_jacket_with_ou_4f0bb6ba-f98d-4eeb-897e-6ddb9f1c8a18-removebg.png' alt="" /> */}
 
           <div className="header__content">
-            <h1 className="title animate__animated animate__fadeIn">Javier Fernandez</h1>
+            <h1 className="title animate__animated animate__fadeIn" data-scroll
+              data-scroll-speed="2"
+              data-scroll-position="top"
+              data-scroll-direction="vertical">Javier Fernandez</h1>
             <span className="title--span animate__animated animate__fadeIn">Desarrollador wed FullStack</span>
             <div className="btn__header animate__animated animate__fadeIn"><a href="#contact">CONTACT</a></div>
           </div>
@@ -113,14 +70,17 @@ function App() {
           </div>
 
         </header >
-        <body>
+        <body data-scroll-section>
 
           <section className="section-black">
 
             <section id="about-me" className="section about">
               <div className="about__container">
 
-                <h2 className="about__title animate__animated animate__fadeIn">About Me</h2>
+                <h2 className="about__title animate__animated animate__fadeIn" data-scroll
+                  data-scroll-speed="1"
+                  data-scroll-position="start"
+                  data-scroll-direction="horizontal">About Me</h2>
 
                 <span className="about__span animate__animated animate__fadeIn">saber mas</span>
                 <span className="about__span about__span--quot animate__animated animate__fadeIn">&lsquo;si puedes imaginarlo puedes programarlo 🕊️&lsquo;</span>
@@ -175,7 +135,6 @@ function App() {
                 <span className="proyects__span">los mejor de mi</span>
               </div>
 
-
               <div className="proyects__container">
                 <SliderComponent />
               </div>
@@ -188,7 +147,7 @@ function App() {
           <section id="contact" className="section contact">
             <div className="contact__header">
               <h2 className="contact__title">LETS WORK TOGETHER</h2>
-              {/* <span className="contact__span">LETS WORK TOGETHER</span> */}
+
             </div>
 
             <div className="contact__form-container">
@@ -219,7 +178,7 @@ function App() {
           </section>
         </body>
 
-        <footer className="footer">
+        <footer data-scroll-section className="footer">
           <div className="footer__container">
             {/* <div className="stripe"></div> */}
 
@@ -236,11 +195,6 @@ function App() {
 
 
             <div className="stripe"></div>
-            {/* <div className="btn__container">
-              <a className="btn__footer" href="">
-              <span className="btn__span">CONTACT</span>
-              </a>
-            </div> */}
 
             <div className="footer__social">
               <ul className="footer__social__list">
@@ -264,9 +218,9 @@ function App() {
             </div>
           </div>
         </footer>
-      </div>
-    </main >
-    // </SmoothScroll>
+      </main >
+    </LocomotiveScrollProvider>
+
   )
 }
 
