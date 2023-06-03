@@ -7,6 +7,7 @@ import CssSvg from "./icons/css"
 import HtmlSvg from "./icons/Html"
 import Arrow from "./icons/Arrow"
 import Hola from "./icons/Hola"
+import Map from "./icons/Map"
 import SliderComponent from "./components/SliderComponent"
 
 // import animateCss from "animate.css"
@@ -35,62 +36,85 @@ function App() {
       }
       containerRef={containerRef}
     >
+
       <main data-scroll-container ref={containerRef}>
-        {/* data-scroll-container  */}
-        <header data-scroll-section data-scroll-speed="3" data-scroll-position="top" className="header">
-          <nav className="navbar">
+        <header data-scroll-section className="header">
+          <div>
+            <nav className="navbar">
+              <div className="navbar__div font-bodani">
+                <span className="navbar__span">©</span>
+                <span className="navbar__span"><a href=""></a> CODE BY JAVIER FERNANDEZ</span>
+              </div>
 
-            <div className="navbar__div">
-              <span className="navbar__span">©</span>
-              <span className="navbar__span">Code by Javier Fernandez</span>
-            </div>
-
-            <ul className="navbar__ul">
-              <li className="navbar__li"><a href="">HOME</a></li>
-              <li className="navbar__li"><a href="#about-me">ABOUT ME</a></li>
-              <li className="navbar__li"><a id="target" href="">PROYECTS</a></li>
-              <li className="navbar__li"><a href="#contact">CONTACT</a></li>
-            </ul>
-          </nav>
-
-          {/* <img className="img__profile" src='/arunbeatnik_young_man_wearing_overshirt_or_shirt_jacket_with_ou_4f0bb6ba-f98d-4eeb-897e-6ddb9f1c8a18-removebg.png' alt="" /> */}
+              <ul className="navbar__ul">
+                <li className="navbar__li">
+                  <button className="btn btn-navbar font-bodani">
+                    <span className="hover-underline-animation " >home</span>
+                  </button>
+                </li>
+                <li className="navbar__li">
+                  <button className="btn btn-navbar font-bodani">
+                    <span className="hover-underline-animation " >about me</span>
+                  </button>
+                </li>
+                <li className="navbar__li">
+                  <button className="btn btn-navbar font-bodani">
+                    <span className="hover-underline-animation " >proyects</span>
+                  </button>
+                </li>
+                <li className="navbar__li">
+                  <button className="btn btn-navbar font-bodani">
+                    <span className="hover-underline-animation " >contact</span>
+                  </button>
+                </li>
+              </ul>
+            </nav>
+          </div>
 
           <div className="header__content">
-            <h1 className="title animate__animated animate__fadeIn" data-scroll
-              data-scroll-speed="2"
-              data-scroll-position="top"
-              data-scroll-direction="vertical">Javier Fernandez</h1>
-            <span className="title--span animate__animated animate__fadeIn">Desarrollador wed FullStack</span>
-            <div className="btn__header animate__animated animate__fadeIn"><a href="#contact">CONTACT</a></div>
+            <h1 data-scroll
+              data-scroll-speed="1" data-scroll-direction="vertical" className="title animate__animated animate__fadeIn">Javier Fernandez</h1>
+            <span data-scroll
+              data-scroll-speed="1" data-scroll-direction="vertical" className="title--span">Desarrollador  wed FullStack</span>
+            <div className="btn__header animate__animated animate__fadeIn">
+              <button className="btn btn-home">
+                <span className="hover-underline-animation font-bodani" >CONNECT</span>
+              </button>
+            </div>
           </div>
 
           <div className="container__located">
-            <p className="header__soan-located"><span className="span__located">Located</span><span className="span__located">in the</span><span className="span__located">Venezuela</span></p>
+            <p className="header__soan-located">
+              <span className="span__located">Located</span>
+              <span className="span__located">in the</span>
+              <span className="span__located">Venezuela</span>
+            </p>
             <Hola />
+            <div className="map">
+              <Map />
+            </div>
           </div>
 
         </header >
+
         <body data-scroll-section>
-
           <section className="section-black">
-
             <section id="about-me" className="section about">
               <div className="about__container">
 
-                <h2 className="about__title animate__animated animate__fadeIn" data-scroll
+                <h2 className="about__title" data-scroll
                   data-scroll-speed="1"
                   data-scroll-position="start"
                   data-scroll-direction="horizontal">About Me</h2>
 
-                <span className="about__span animate__animated animate__fadeIn">saber mas</span>
-                <span className="about__span about__span--quot animate__animated animate__fadeIn">&lsquo;si puedes imaginarlo puedes programarlo 🕊️&lsquo;</span>
+                <span className="about__span ">saber mas</span>
+                <span className="about__span about__span--quot ">&lsquo;si puedes imaginarlo puedes programarlo 🕊️&lsquo;</span>
 
-                <p className="about__text animate__animated animate__fadeIn">Hola soy Javier Fernandez y disfruto creando efectos de interfaz de usuario, animaciones y
+                <p className="about__text ">Hola soy Javier Fernandez y disfruto creando efectos de interfaz de usuario, animaciones y
                   desarrollando experiencias de usuario intuitivas y dinámicas. Me gusta crear sitios web responsivos
                   con diseño enfocado en móvil primero. Tengo experiencia con HTML, CSS, JavaScript, React, NodeJs, express y he construido diferentes proyectos con ello. Suelo ponerme retos diarios que me lleven a ser más
                   eficiente como programador, logrando así identificar y resolver de mejor manera las necesidades
                   que se me presenten.</p>
-
               </div>
             </section>
 
@@ -127,54 +151,70 @@ function App() {
             <div className="stripe"></div>
 
             {/*  PROYECT   */}
-
             <section id="proyects" className="section proyects">
-
               <div className="proyects__header">
                 <h2 className="proyects__title">Proyect</h2>
                 <span className="proyects__span">los mejor de mi</span>
               </div>
 
-              <div className="proyects__container">
+              <div className="r">
                 <SliderComponent />
               </div>
-
             </section>
 
           </section>
+
           {/*   CONTACT  */}
-
           <section id="contact" className="section contact">
-            <div className="contact__header">
-              <h2 className="contact__title">LETS WORK TOGETHER</h2>
+            <div className="container__contact">
+              <div className="contact__header">
+                <h2 data-scroll-class="probando" data-scroll
+                  data-scroll-speed="0.5"
+                  data-scroll-position=""
+                  data-scroll-direction="vertical" className="contact__title">
+                  <span className="font-bodani">LET&apos;S</span>
+                  <span data-scroll
+                    data-scroll-speed="0.5"
+                    data-scroll-direction="horizontal">WORK</span>
+                  <span>TOGETHER</span>
+                </h2>
+              </div>
 
+              <div className="contact__form-container">
+                <form className="form" action="https://formsubmit.co/jf2876430@gmail.com" method="POST" id="form">
+                  <div className="form__col">
+                    <label className="label" htmlFor="name">WHAT&lsquo;S YOUR NAME?</label>
+                    <input className="field" type="text" id="form-name" name="name" required placeholder="John Doe *" />
+                    <h5 className="serif">01</h5>
+                  </div>
+                  <div className="form__col">
+                    <label className="label" htmlFor="email">WHAT&lsquo;S YOUR EMAIL?</label>
+                    <input className="field" type="email" id="form-email" name="email" required placeholder="john@doe.com *" />
+                    <h5 className="serif">02</h5>
+                  </div>
+                  <div className="form__col">
+                    <label className="label" htmlFor="service">WHAT SERVICES ARE YOU LOOKING FOR?</label>
+                    <input className="field" type="text" id="form-service" name="service" required placeholder="Web Development ..." />
+                    <h5 className="serif">03</h5>
+                  </div>
+                  <div className="form__col">
+                    <label className="label" htmlFor="message">YOUR MESSAGE</label>
+                    <textarea className="field" name="message" id="form-message" rows="4" placeholder="Hey there, can you help me with ... *"></textarea>
+                    <h5 className="serif">04</h5>
+                  </div>
+                  <div>
+                    <div>
+                      <button className="btn btn-form" type="submit" name="submit" form="form" value="submit">
+                        <span className="hover-underline-animation" >SEND MESSAGE</span>
+                      </button>
+                    </div>
+                  </div>
+                  <input type="hidden" name="_next" value="http://127.0.0.1:5173/" />
+                  <input type="hidden" name="_captcha" value="false"></input>
+                </form>
+              </div>
             </div>
 
-            <div className="contact__form-container">
-              <form className="form" action="">
-                <div className="form__col">
-                  <label className="label" htmlFor="name">WHAT&lsquo;S YOUR NAME?</label>
-                  <input className="field" type="text" id="form-name" name="name" required placeholder="John Doe *" />
-                  <h5 className="serif">01</h5>
-                </div>
-                <div className="form__col">
-                  <label className="label" htmlFor="email">WHAT&lsquo;S YOUR EMAIL?</label>
-                  <input className="field" type="text" id="form-email" name="email" required placeholder="john@doe.com" />
-                  <h5 className="serif">02</h5>
-                </div>
-                <div className="form__col">
-                  <label className="label" htmlFor="">WHAT SERVICES ARE YOU LOOKING FOR?</label>
-                  <input className="field" type="text" id="form-email" name="email" required placeholder="john@doe.com" />
-                  <h5 className="serif">03</h5>
-                </div>
-                <div className="form__col">
-                  <label className="label" htmlFor="message">YOUR MESSAGE</label>
-                  <textarea className="field" name="message" id="form-message" rows="4" placeholder="Hey there, can you help me with ... *"></textarea>
-                  <h5 className="serif">04</h5>
-                </div>
-
-              </form>
-            </div>
           </section>
         </body>
 
@@ -183,8 +223,10 @@ function App() {
             {/* <div className="stripe"></div> */}
 
             <h3 className="foooter__contact">SEND US AN EMAIL</h3>
+            <button className="btn2 btn-footer" href="mailto:jf2876430@gmail.com">
+              <span className="font-bodani footer__email hover-underline-animation-footer" ><a href="mailto:jf2876430@gmail.com?Subject=let's%20schedule%20a%20chat">jf2876430@gmail.com</a> </span>
+            </button>
 
-            <span className="footer__email">jf2876430@gmail.com</span>
             <div className="btn__fill"></div>
             {/* TODO: hacer el subrayado */}
 

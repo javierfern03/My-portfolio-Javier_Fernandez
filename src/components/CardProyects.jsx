@@ -1,6 +1,5 @@
 
-
-const CardProyects = ({ imgProyect, title, text, tecnologias }) => {
+const CardProyects = ({ imgProyect, title, text, tecnologias, urlGithubLink, urlPageLink }) => {
   return (
     <article className="card">
 
@@ -19,16 +18,18 @@ const CardProyects = ({ imgProyect, title, text, tecnologias }) => {
             }
           </div>
           <div className="card__btns">
-            <div className="btn__container">
-              <a className="btn" href="">
-                <span className="btn__span">visitar</span>
-              </a>
+            <div className="btn2">
+              <span className="hover-underline-animation-footer">
+                <a rel="noopener noreferrer" target="_blank" href={urlGithubLink}>Github</a>
+              </span>
             </div>
 
-            <div className="btn__container">
-              <a className="btn" href="">
-                <span className="btn__span">git</span>
-              </a>
+
+            <div className="btn2">
+              <span className="hover-underline-animation-footer">
+                <a rel="noopener noreferrer" target="_blank" href={urlPageLink}>Home Page</a>
+              </span>
+
             </div>
           </div>
 
