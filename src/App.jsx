@@ -36,7 +36,6 @@ function App() {
       }
       containerRef={containerRef}
     >
-
       <main data-scroll-container ref={containerRef}>
         <header data-scroll-section className="header">
           <div>
@@ -49,22 +48,22 @@ function App() {
               <ul className="navbar__ul">
                 <li className="navbar__li">
                   <button className="btn btn-navbar font-bodani">
-                    <span className="hover-underline-animation " >home</span>
+                    <a href="#home" data-scroll-to className="hover-underline-animation" >HOME </a>
                   </button>
                 </li>
                 <li className="navbar__li">
                   <button className="btn btn-navbar font-bodani">
-                    <span className="hover-underline-animation " >about me</span>
+                    <a href="#about-me" data-scroll-to className="hover-underline-animation" >ABOUT ME </a>
                   </button>
                 </li>
                 <li className="navbar__li">
                   <button className="btn btn-navbar font-bodani">
-                    <span className="hover-underline-animation " >proyects</span>
+                    <a href="#proyects" data-scroll-to className="hover-underline-animation" >PROYECTS</a>
                   </button>
                 </li>
                 <li className="navbar__li">
                   <button className="btn btn-navbar font-bodani">
-                    <span className="hover-underline-animation " >contact</span>
+                    <a href="#contact" data-scroll-to className="hover-underline-animation" >CONTACT</a>
                   </button>
                 </li>
               </ul>
@@ -73,12 +72,12 @@ function App() {
 
           <div className="header__content">
             <h1 data-scroll
-              data-scroll-speed="1" data-scroll-direction="vertical" className="title animate__animated animate__fadeIn">Javier Fernandez</h1>
+              data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-class="fadeInIn" className="title fadeIn">Javier Fernandez</h1>
             <span data-scroll
-              data-scroll-speed="1" data-scroll-direction="vertical" className="title--span">Desarrollador  wed FullStack</span>
-            <div className="btn__header animate__animated animate__fadeIn">
+              data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-class="fadeInIn" className="title--span fadeIn">Desarrollador  wed FullStack</span>
+            <div className="btn__header" >
               <button className="btn btn-home">
-                <span className="hover-underline-animation font-bodani" >CONNECT</span>
+                <a href="#contact" data-scroll-to className="hover-underline-animation font-bodani " >CONNECT</a>
               </button>
             </div>
           </div>
@@ -102,15 +101,15 @@ function App() {
             <section id="about-me" className="section about">
               <div className="about__container">
 
-                <h2 className="about__title" data-scroll
-                  data-scroll-speed="1"
+                <h2 className="about__title fadeIn font-bodani" id="about-me" data-scroll-class="fadeInIn" data-scroll
+                  data-scroll-speed="0.5"
                   data-scroll-position="start"
-                  data-scroll-direction="horizontal">About Me</h2>
+                  data-scroll-direction="vertical">ABOUT ME</h2>
 
                 <span className="about__span ">saber mas</span>
                 <span className="about__span about__span--quot ">&lsquo;si puedes imaginarlo puedes programarlo 🕊️&lsquo;</span>
 
-                <p className="about__text ">Hola soy Javier Fernandez y disfruto creando efectos de interfaz de usuario, animaciones y
+                <p className="about__text fadeInLeft" data-scroll data-scroll-class="fadeInInLeft"  >Hola soy Javier Fernandez y disfruto creando efectos de interfaz de usuario, animaciones y
                   desarrollando experiencias de usuario intuitivas y dinámicas. Me gusta crear sitios web responsivos
                   con diseño enfocado en móvil primero. Tengo experiencia con HTML, CSS, JavaScript, React, NodeJs, express y he construido diferentes proyectos con ello. Suelo ponerme retos diarios que me lleven a ser más
                   eficiente como programador, logrando así identificar y resolver de mejor manera las necesidades
@@ -151,13 +150,14 @@ function App() {
             <div className="stripe"></div>
 
             {/*  PROYECT   */}
-            <section id="proyects" className="section proyects">
+            <section id="proyect " className="section proyects">
               <div className="proyects__header">
-                <h2 className="proyects__title">Proyect</h2>
+                <h2 className="proyects__title font-bodani fadeIn" id="proyects" data-scroll data-scroll-class="fadeInIn" data-scroll-speed="0.5"
+                  data-scroll-direction="vertical">PROYECTS</h2>
                 <span className="proyects__span">los mejor de mi</span>
               </div>
 
-              <div className="r">
+              <div className="proyects__container">
                 <SliderComponent />
               </div>
             </section>
@@ -170,7 +170,6 @@ function App() {
               <div className="contact__header">
                 <h2 data-scroll-class="probando" data-scroll
                   data-scroll-speed="0.5"
-                  data-scroll-position=""
                   data-scroll-direction="vertical" className="contact__title">
                   <span className="font-bodani">LET&apos;S</span>
                   <span data-scroll

@@ -128,6 +128,24 @@ img {
   width: 100%;
 }
 
+.fadeIn {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.fadeInIn {
+  opacity: 1;
+}
+.fadeInLeft {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 1s;
+}
+
+.fadeInInLeft {
+  opacity: 1;
+  transform: translateX(0);
+}
+
 /*    buttoms    */
 .font-bodani {
   font-family: "Bodoni Moda", serif;
@@ -218,6 +236,14 @@ img {
   background-color: #ffffff;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
+}
+
+.btn a {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
 }
 
 .btn-navbar {
@@ -415,13 +441,14 @@ img {
 }
 
 .proyects__container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
 }
 
-.proyects__item {
+.proyects__container-card {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
 }
 
 .card {
@@ -517,21 +544,11 @@ img {
 
 .contact__form-container {
   max-width: 82%;
-  /* margin: 3rem 6rem 3rem 3rem; */
-}
-
-.contact__header {
-  /* display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem; */
-  /* margin: 3rem; */
 }
 
 .contact__title {
   font-size: calc(2.5rem + 2.5vw);
-  transition: all 2s;
+  transition: opacity 3s;
   opacity: 0;
   padding-left: 4rem;
 }
@@ -544,9 +561,6 @@ img {
   display: block;
 }
 
-/* .contact__title span:last-child {
-  padding-left: 2rem;
-} */
 .form {
   position: relative;
   width: 100%;
@@ -626,8 +640,6 @@ img {
   position: absolute;
   margin: 3rem 1rem;
   font-size: 1rem;
-}
-.footer__email {
 }
 
 .btn__container {

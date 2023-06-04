@@ -3,7 +3,7 @@ import CardProyects from "./CardProyects"
 
 const SliderComponent = () => {
   return (
-    <div className="proyects__container">
+    <div className="proyects__container-card">
       <div className="proyects__item">
         <CardProyects imgProyect='\charla.PNG' title={'Pokedex'} urlGithubLink={"https://github.com/javierfern03/poke-api"} urlPageLink={"https://poke-api-javier-fernandez.netlify.app/"} text={'hola a toodos este es mi protexto espero que les guste me costo mucho hacerlo le dedique mucho tiempo'} tecnologias={['html', 'css', 'javascript', 'react']} />
       </div>
