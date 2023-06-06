@@ -58,7 +58,7 @@ function App() {
                 </li>
                 <li className="navbar__li">
                   <button className="btn btn-navbar font-bodani">
-                    <a href="#proyects" data-scroll-to className="hover-underline-animation" >PROYECTS</a>
+                    <a href="#proyects" data-scroll-to className="hover-underline-animation" >PROJECTS</a>
                   </button>
                 </li>
                 <li className="navbar__li">
@@ -74,7 +74,7 @@ function App() {
             <h1 data-scroll
               data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-class="fadeInIn" className="title fadeIn">Javier Fernandez</h1>
             <span data-scroll
-              data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-class="fadeInIn" className="title--span fadeIn">Desarrollador  wed FullStack</span>
+              data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-class="fadeInIn" className="title--span fadeIn">Desarrollador  web FullStack</span>
             <div className="btn__header" >
               <button className="btn btn-home">
                 <a href="#contact" data-scroll-to className="hover-underline-animation font-bodani " >CONNECT</a>
@@ -153,7 +153,7 @@ function App() {
             <section id="proyect " className="section proyects">
               <div className="proyects__header">
                 <h2 className="proyects__title font-bodani fadeIn" id="proyects" data-scroll data-scroll-class="fadeInIn" data-scroll-speed="0.5"
-                  data-scroll-direction="vertical">PROYECTS</h2>
+                  data-scroll-direction="vertical">PROJECTS</h2>
                 <span className="proyects__span">los mejor de mi</span>
               </div>
 
