@@ -154,7 +154,7 @@ function App() {
               <div className="proyects__header">
                 <h2 className="proyects__title font-bodani fadeIn" id="proyects" data-scroll data-scroll-class="fadeInIn" data-scroll-speed="0.5"
                   data-scroll-direction="vertical">PROJECTS</h2>
-                <span className="proyects__span">los mejor de mi</span>
+                {/* <span className="proyects__span">los mejor de mi</span> */}
               </div>
 
               <div className="proyects__container">
