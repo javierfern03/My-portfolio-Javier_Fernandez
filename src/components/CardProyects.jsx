@@ -1,15 +1,14 @@
 
-const CardProyects = ({ imgProyect, title, text, tecnologias, urlGithubLink, urlPageLink }) => {
+const CardProyects = ({ imgProyect, title, tecnologias, urlGithubLink, urlPageLink }) => {
   return (
     <article className="card">
 
-      <h3 className="card__title">{title}</h3>
       <img className="card__img" src={imgProyect} alt="" />
 
       <body className="card__body">
         <div className="card__body-container">
+      <h3 className="card__title">{title}</h3>
 
-          <p className="card__text">{text}</p>
           <div className="card__span__container">
             {
               tecnologias?.map(tecnologia => (

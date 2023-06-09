@@ -1,4 +1,5 @@
 import "./App.css"
+
 import JavaScriptSvg from "./icons/JavaScript"
 import NodeSvg from "./icons/NodeJs"
 import ReactSvg from "./icons/React"
@@ -10,21 +11,30 @@ import Hola from "./icons/Hola"
 import Map from "./icons/Map"
 import SliderComponent from "./components/SliderComponent"
 
-// import animateCss from "animate.css"
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
-import { useRef } from "react"
+import { useRef, useState } from "react"
+import Loading from "./components/Loading"
 
 
 function App() {
   const containerRef = useRef(null)
+  const [isLoading, setIsLoading] = useState(true)
+
+  setTimeout(() => {
+      setIsLoading(false)
+  }, 3355);
+
+  if(isLoading){
+    return <Loading/>
+  }else{
 
   return (
-
     <LocomotiveScrollProvider
       options={
         {
           smooth: true,
           // ... all available Locomotive Scroll instance options 
+          multiplier: 1.5
         }
       }
       watch={
@@ -74,7 +84,7 @@ function App() {
             <h1 data-scroll
               data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-class="fadeInIn" className="title fadeIn">Javier Fernandez</h1>
             <span data-scroll
-              data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-class="fadeInIn" className="title--span fadeIn">Desarrollador  web FullStack</span>
+              data-scroll-speed="1" data-scroll-direction="vertical" data-scroll-class="fadeInIn" className="title--span fadeIn">Full Stack Web Developer</span>
             <div className="btn__header" >
               <button className="btn btn-home">
                 <a href="#contact" data-scroll-to className="hover-underline-animation font-bodani " >CONNECT</a>
@@ -83,7 +93,7 @@ function App() {
           </div>
 
           <div className="container__located">
-            <p className="header__soan-located">
+            <p className="header__soan-located font-bodani">
               <span className="span__located">Located</span>
               <span className="span__located">in the</span>
               <span className="span__located">Venezuela</span>
@@ -106,14 +116,10 @@ function App() {
                   data-scroll-position="start"
                   data-scroll-direction="vertical">ABOUT ME</h2>
 
-                <span className="about__span ">saber mas</span>
-                <span className="about__span about__span--quot ">&lsquo;si puedes imaginarlo puedes programarlo 🕊️&lsquo;</span>
+                {/* <span className="about__span ">saber mas</span> */}
+                {/* <span className="about__span about__span--quot ">&lsquo;si puedes imaginarlo puedes programarlo 🕊️&lsquo;</span> */}
 
-                <p className="about__text fadeInLeft" data-scroll data-scroll-class="fadeInInLeft"  >Hola soy Javier Fernandez y disfruto creando efectos de interfaz de usuario, animaciones y
-                  desarrollando experiencias de usuario intuitivas y dinámicas. Me gusta crear sitios web responsivos
-                  con diseño enfocado en móvil primero. Tengo experiencia con HTML, CSS, JavaScript, React, NodeJs, express y he construido diferentes proyectos con ello. Suelo ponerme retos diarios que me lleven a ser más
-                  eficiente como programador, logrando así identificar y resolver de mejor manera las necesidades
-                  que se me presenten.</p>
+                <p className="about__text fadeInLeft" data-scroll data-scroll-class="fadeInInLeft"  >Hi, I&apos;m Javier Fernandez and I enjoy creating user interface effects, animations and developing intuitive and dynamic user experiences. I like to build responsive websites with mobile-first design. I have experience with HTML, CSS, JavaScript, React, NodeJs, express and have built different projects with it. I usually set myself daily challenges that lead me to be more efficient as a programmer, thus being able to better identify and solve the needs that arise.</p>
               </div>
             </section>
 
@@ -126,7 +132,7 @@ function App() {
                 </div>
                 <div className="skills__item">
                   <CssSvg className='skills__logo' />
-                  <span>Css</span>
+                  <span>CSS</span>
                 </div>
                 <div className="skills__item">
                   <JavaScriptSvg className='skills__logo' />
@@ -223,7 +229,7 @@ function App() {
 
             <h3 className="foooter__contact">SEND US AN EMAIL</h3>
             <button className="btn2 btn-footer" href="mailto:jf2876430@gmail.com">
-              <span className="font-bodani footer__email hover-underline-animation-footer" ><a href="mailto:jf2876430@gmail.com?Subject=let's%20schedule%20a%20chat">jf2876430@gmail.com</a> </span>
+              <span className="font-bodani footer__email hover-underline-animation-footer" ><a href="mailto:jf2876430@gmail.com?Subject=let's%20schedule%20a%20a%20live%20chat">jf2876430@gmail.com</a> </span>
             </button>
 
             <div className="btn__fill"></div>
@@ -262,7 +268,7 @@ function App() {
       </main >
     </LocomotiveScrollProvider>
 
-  )
+  )}
 }
 
 export default App
