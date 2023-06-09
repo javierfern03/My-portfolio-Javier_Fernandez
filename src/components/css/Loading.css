@@ -36,19 +36,19 @@
 
 h2.loader-h2{
     margin:  0;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 500;
 }
 
 h2.loader-h2::before{
     content: "Hello"; 
-    animation-name: hola;
-    animation-duration: 3s;
+    animation-name: Hello;
+    animation-duration: 3.2s;
     animation-timing-function: ease-in; 
     opacity: 0;
 }  
 
-@keyframes hola {
+@keyframes Hello {
     0%{
         content: "Hello";
         opacity: 1;
@@ -86,7 +86,7 @@ h2.loader-h2::before{
     85%{
         content: "Guten tag";opacity: 1;
     }
-    100%{
+    90%{
         content: "Hello"; opacity: 1;
     }
 }

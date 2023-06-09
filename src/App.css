@@ -103,8 +103,9 @@ ul {
 
 html {
   font-family: "Raleway", sans-serif;
-  /* scroll-behavior: smooth; */
   overflow-x: hidden;
+  /* position: fixed; */
+
 }
 
 body {
@@ -112,7 +113,6 @@ body {
 }
 main {
   font-size: 16px;
-  /* overflow: hidden; */
 }
 
 ::-webkit-scrollbar {
@@ -131,7 +131,7 @@ a {
 img {
   width: 100%;
 }
-
+html.has-scroll-smooth { backface-visibility: hidden; transform: translateZ(0); }
 .fadeIn {
   opacity: 0;
   transition: opacity 1s;
@@ -635,7 +635,7 @@ img {
 
 .footer__container {
   position: relative;
-  min-height: 80vh;
+  min-height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -724,4 +724,12 @@ img {
   position: absolute;
   top: 15px;
   left: 156px;
+}
+html.has-scroll-smooth {
+  overflow: hidden;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }

@@ -12,7 +12,7 @@ import Map from "./icons/Map"
 import SliderComponent from "./components/SliderComponent"
 
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
-import { useRef, useState } from "react"
+import {useRef, useState } from "react"
 import Loading from "./components/Loading"
 
 
@@ -23,10 +23,10 @@ function App() {
   setTimeout(() => {
       setIsLoading(false)
   }, 3355);
-
+  
   if(isLoading){
     return <Loading/>
-  }else{
+  }
 
   return (
     <LocomotiveScrollProvider
@@ -34,11 +34,13 @@ function App() {
         {
           smooth: true,
           // ... all available Locomotive Scroll instance options 
-          multiplier: 1.5
+          multiplier: 1.5,
+          resetNativeScroll: true,
         }
       }
       watch={
         [
+          // update()	
           //..all the dependencies you want to watch to update the scroll.
           //  Basicaly, you would want to watch page/location changes
           //  For exemple, on Next.js you would want to watch properties like `router.asPath` (you may want to add more criterias if the instance should be update on locations with query parameters)
@@ -160,7 +162,6 @@ function App() {
               <div className="proyects__header">
                 <h2 className="proyects__title font-bodani fadeIn" id="proyects" data-scroll data-scroll-class="fadeInIn" data-scroll-speed="0.5"
                   data-scroll-direction="vertical">PROJECTS</h2>
-                {/* <span className="proyects__span">los mejor de mi</span> */}
               </div>
 
               <div className="proyects__container">
@@ -225,7 +226,6 @@ function App() {
 
         <footer data-scroll-section className="footer">
           <div className="footer__container">
-            {/* <div className="stripe"></div> */}
 
             <h3 className="foooter__contact">SEND US AN EMAIL</h3>
             <button className="btn2 btn-footer" href="mailto:jf2876430@gmail.com">
@@ -233,24 +233,21 @@ function App() {
             </button>
 
             <div className="btn__fill"></div>
-            {/* TODO: hacer el subrayado */}
-
 
             <div className="footer__arrow">
               <Arrow />
             </div>
 
-
             <div className="stripe"></div>
 
-            <div className="footer__social">
+            {/* <div className="footer__social">
               <ul className="footer__social__list">
                 <h4>social</h4>
                 <li>linkeding</li>
                 <li>Javier Fernandez</li>
                 <li>+58 04248450633</li>
               </ul>
-            </div>
+            </div> */}
 
             <div className="footer__footer">
               <div>
@@ -267,8 +264,7 @@ function App() {
         </footer>
       </main >
     </LocomotiveScrollProvider>
-
   )}
-}
+
 
 export default App
