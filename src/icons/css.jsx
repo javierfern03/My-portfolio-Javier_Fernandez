@@ -5,7 +5,7 @@ const CssSvg = (props) => (
     width={24}
     height={24}
     style={{
-      fill: "#5c5b5b",
+      fill: "current",
     }}
     {...props}
   >
