@@ -5,12 +5,13 @@ import ReactSvg from "./icons/React";
 import TailwindSvg from "./icons/Tailwind";
 import CssSvg from "./icons/css";
 import HtmlSvg from "./icons/Html";
-import Arrow from "./icons/Arrow";
 import SliderComponent from "./components/SliderComponent";
+import Git from "./icons/Github";
 
 import { LocomotiveScrollProvider } from "react-locomotive-scroll";
 import { useRef, useState } from "react";
 import Loading from "./components/Loading";
+import Linkedin from "./icons/Linkedin";
 
 function App() {
   const containerRef = useRef(null);
@@ -105,33 +106,51 @@ function App() {
               </ul>
             </nav>
           </div>
+          <div className="header__content__container">
+            <div className="header__content">
+              <div className="header__content__text">
+                <h1
+                  data-scroll
+                  data-scroll-speed="1"
+                  data-scroll-direction="vertical"
+                  data-scroll-class="fadeInIn"
+                  className="title fadeIn"
+                >
+                  FullStack web Developer
+                </h1>
+                <span
+                  data-scroll
+                  data-scroll-speed="1"
+                  data-scroll-direction="vertical"
+                  data-scroll-class="fadeInIn"
+                  className="title--span fadeIn"
+                >
+                  Hi, Javier Fernandez. A passionate Full Stack Developer based
+                  in Anzuategui, Venenzuela. 📍
+                </span>
+                <div className="hero__logo">
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://github.com/javierfern03"
+                  >
+                    <Git />
+                  </a>
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href="https://www.linkedin.com/in/javier-fern%C3%A1ndez-/"
+                  >
+                    <Linkedin />
+                  </a>
+                </div>
+              </div>
 
-          <div className="header__content">
-            <div className="header__content__text">
-              <h1
-                data-scroll
-                data-scroll-speed="1"
-                data-scroll-direction="vertical"
-                data-scroll-class="fadeInIn"
-                className="title fadeIn"
-              >
-                Front-End React Developer
-              </h1>
-              <span
-                data-scroll
-                data-scroll-speed="1"
-                data-scroll-direction="vertical"
-                data-scroll-class="fadeInIn"
-                className="title--span fadeIn"
-              >
-                Hi, Javier Fernandez. A passionate Full Stack Developer based in Anzuategui, Venenzuela. 📍
-              </span>
-
+              <div className="hero-image"></div>
             </div>
-          <div className="hero-image"></div>
           </div>
 
-          <a href="#">
+          <a>
             <div id="mouse-scroll">
               <div className="mouse">
                 <div className="mouse-in"></div>
@@ -166,14 +185,15 @@ function App() {
                   data-scroll
                   data-scroll-class="fadeInInLeft"
                 >
-                  Hi, I&apos;m Javier Fernandez and I enjoy creating user
-                  interface effects, animations and developing intuitive and
-                  dynamic user experiences. I like to build responsive websites
-                  with mobile-first design. I have experience with HTML, CSS,
-                  JavaScript, React, NodeJs, express and have built different
-                  projects with it. I usually set myself daily challenges that
-                  lead me to be more efficient as a programmer, thus being able
-                  to better identify and solve the needs that arise.
+                  Hello! I&apos;m Javier Fernandez, a passionate and creative
+                  web developer with experience in HTML, CSS, JavaScript, and
+                  frameworks like React. I focus on usability and user
+                  experience. I have the ability to solve challenges and work in
+                  a team. Additionally, I have experience in developing web
+                  applications using Node.js and Express, allowing me to create
+                  comprehensive and scalable solutions. If you&apos;re looking
+                  for a committed and results-oriented web developer, feel free
+                  to contact me!
                 </p>
               </div>
             </section>
@@ -188,23 +208,23 @@ function App() {
                   <span>HTML</span>
                 </div>
                 <div className="skills__item">
-                  <CssSvg fill="#337CC9"  className="skills__logo" />
+                  <CssSvg fill="#337CC9" className="skills__logo" />
                   <span>CSS</span>
                 </div>
                 <div className="skills__item">
-                  <JavaScriptSvg fill="red"  className="skills__logo" />
+                  <JavaScriptSvg fill="red" className="skills__logo" />
                   <span>JavaScript</span>
                 </div>
                 <div className="skills__item">
-                  <NodeSvg fill="red"  className="skills__logo" />
+                  <NodeSvg fill="red" className="skills__logo" />
                   <span>NodeJs</span>
                 </div>
                 <div className="skills__item">
-                  <ReactSvg fill="red"  className="skills__logo" />
+                  <ReactSvg fill="red" className="skills__logo" />
                   <span>React</span>
                 </div>
                 <div className="skills__item">
-                  <TailwindSvg fill="red"  className="skills__logo" />
+                  <TailwindSvg fill="red" className="skills__logo" />
                   <span>TailwindCss</span>
                 </div>
               </div>
@@ -237,109 +257,163 @@ function App() {
           <section id="contact" className="section contact">
             <div className="container__contact">
               <div className="contact__header">
-                <h2
-                  data-scroll-class="probando"
-                  data-scroll
-                  data-scroll-speed="0.5"
-                  data-scroll-direction="vertical"
-                  className="contact__title"
-                >
-                  <span className="font-bodani">LET&apos;S</span>
-                  <span
+                <div>
+                  <h2
+                    data-scroll-class="probando"
                     data-scroll
                     data-scroll-speed="0.5"
-                    data-scroll-direction="horizontal"
+                    data-scroll-direction="vertical"
+                    className="contact__title"
                   >
-                    WORK
-                  </span>
-                  <span>TOGETHER</span>
-                </h2>
+                    <span className="font-bodani">LET&apos;S</span>
+                    <span
+                      data-scroll
+                      data-scroll-speed="0.5"
+                      data-scroll-direction="horizontal"
+                    >
+                      WORK
+                    </span>
+                    <span>TOGETHER</span>
+                  </h2>
+                </div>
+
+                <div className="contact__header__image-container" data-scroll>
+                  <div
+                    data-scroll
+                    className="contact__header__image-container-img"
+                  >
+                    <img
+                      data-scroll
+                      data-scroll-speed="-2"
+                      src="/altumcode-PNbDkQ2DDgM-unsplash.jpg"
+                      alt="Home office image"
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="contact__form-container">
-                <form
-                  className="form"
-                  action="https://formsubmit.co/jf2876430@gmail.com"
-                  method="POST"
-                  id="form"
-                >
-                  <div className="form__col">
-                    <label className="label" htmlFor="name">
-                      WHAT&lsquo;S YOUR NAME?
-                    </label>
-                    <input
-                      className="field"
-                      type="text"
-                      id="form-name"
-                      name="name"
-                      required
-                      placeholder="John Doe *"
-                    />
-                    <h5 className="serif">01</h5>
-                  </div>
-                  <div className="form__col">
-                    <label className="label" htmlFor="email">
-                      WHAT&lsquo;S YOUR EMAIL?
-                    </label>
-                    <input
-                      className="field"
-                      type="email"
-                      id="form-email"
-                      name="email"
-                      required
-                      placeholder="john@doe.com *"
-                    />
-                    <h5 className="serif">02</h5>
-                  </div>
-                  <div className="form__col">
-                    <label className="label" htmlFor="service">
-                      WHAT SERVICES ARE YOU LOOKING FOR?
-                    </label>
-                    <input
-                      className="field"
-                      type="text"
-                      id="form-service"
-                      name="service"
-                      required
-                      placeholder="Web Development ..."
-                    />
-                    <h5 className="serif">03</h5>
-                  </div>
-                  <div className="form__col">
-                    <label className="label" htmlFor="message">
-                      YOUR MESSAGE
-                    </label>
-                    <textarea
-                      className="field"
-                      name="message"
-                      id="form-message"
-                      rows="4"
-                      placeholder="Hey there, can you help me with ... *"
-                    ></textarea>
-                    <h5 className="serif">04</h5>
-                  </div>
-                  <div>
-                    <div>
-                      <button
-                        className="btn btn-form"
-                        type="submit"
-                        name="submit"
-                        form="form"
-                        value="submit"
-                      >
-                        <span className="hover-underline-animation">
-                          SEND MESSAGE
-                        </span>
-                      </button>
+                <div>
+                  <form
+                    className="form"
+                    action="https://formsubmit.co/jf2876430@gmail.com"
+                    method="POST"
+                    id="form"
+                  >
+                    <div className="form__col">
+                      <label className="label" htmlFor="name">
+                        WHAT&lsquo;S YOUR NAME?
+                      </label>
+                      <input
+                        className="field"
+                        type="text"
+                        id="form-name"
+                        name="name"
+                        required
+                        placeholder="John Doe *"
+                      />
+                      <h5 className="serif">01</h5>
                     </div>
+                    <div className="form__col">
+                      <label className="label" htmlFor="email">
+                        WHAT&lsquo;S YOUR EMAIL?
+                      </label>
+                      <input
+                        className="field"
+                        type="email"
+                        id="form-email"
+                        name="email"
+                        required
+                        placeholder="john@doe.com *"
+                      />
+                      <h5 className="serif">02</h5>
+                    </div>
+                    <div className="form__col">
+                      <label className="label" htmlFor="service">
+                        WHAT SERVICES ARE YOU LOOKING FOR?
+                      </label>
+                      <input
+                        className="field"
+                        type="text"
+                        id="form-service"
+                        name="service"
+                        required
+                        placeholder="Web Development ..."
+                      />
+                      <h5 className="serif">03</h5>
+                    </div>
+                    <div className="form__col">
+                      <label className="label" htmlFor="message">
+                        YOUR MESSAGE
+                      </label>
+                      <textarea
+                        className="field"
+                        name="message"
+                        id="form-message"
+                        rows="4"
+                        placeholder="Hey there, can you help me with ... *"
+                      ></textarea>
+                      <h5 className="serif">04</h5>
+                    </div>
+                    <div>
+                      <div>
+                        <button
+                          className="btn btn-form"
+                          type="submit"
+                          name="submit"
+                          form="form"
+                          value="submit"
+                        >
+                          <span className="hover-underline-animation">
+                            SEND MESSAGE
+                          </span>
+                        </button>
+                      </div>
+                    </div>
+                    <input
+                      type="hidden"
+                      name="_next"
+                      value="https://javier-fernandez-portfolio-wed.netlify.app/"
+                    />
+                    <input type="hidden" name="_captcha" value="false"></input>
+                  </form>
+                </div>
+
+                <div className="contact__details ">
+                  <div>
+                    <h4>Contact Details</h4>
+                    <ul>
+                      <li>
+                        <span className="hover-underline-animation-footer">
+                          <a
+                            style={{ color: "black" }}
+                            href="mailto:jf2876430@gmail.com?Subject=let's%20schedule%20a%20a%20live%20chat"
+                          >
+                            jf2876430@gmail.com
+                          </a>
+                        </span>
+                      </li>
+                      <li>+ 58 4248450633</li>
+                      <li>Location: Venezuela</li>
+                    </ul>
                   </div>
-                  <input
-                    type="hidden"
-                    name="_next"
-                    value="https://javier-fernandez-portfolio-wed.netlify.app/"
-                  />
-                  <input type="hidden" name="_captcha" value="false"></input>
-                </form>
+                  <div className="hero__logo">
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://github.com/javierfern03"
+                    >
+                      <Git />
+                    </a>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href="https://www.linkedin.com/in/javier-fern%C3%A1ndez-/"
+                    >
+                      <Linkedin />
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -355,13 +429,9 @@ function App() {
               <span className="font-bodani footer__email hover-underline-animation-footer">
                 <a href="mailto:jf2876430@gmail.com?Subject=let's%20schedule%20a%20a%20live%20chat">
                   jf2876430@gmail.com
-                </a>{" "}
+                </a>
               </span>
             </button>
-
-            <div className="footer__arrow">
-              <Arrow />
-            </div>
 
             <div className="stripe"></div>
 
