@@ -456,7 +456,7 @@ button span {
   min-height: 100vh;
   position: relative;
 }
-.header__content__container{
+.header__content__container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -581,37 +581,86 @@ button span {
   color: #c0bfbf;
 }
 
-/*    Skills    */
+/*            Skills          */
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.Skills {
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 0.5rem 0;
+  position: relative;
+  background-color: #000000;
+}
+
+.Skills:hover .skills__container {
+  animation-play-state: paused;
+}
+
+.Skills:before,
+.Skills:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+.Skills:before {
+  left: 0;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), #000000);
+}
+
+.Skills:after {
+  right: 0;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), #000000);
+}
 
 .skills__container {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  justify-content: space-between;
-  align-items: center;
   color: var(--secundary-color);
-  overflow: hidden;
-  padding: 2rem 1rem;
-  font-size: 1.1rem;
-  font-weight: 500;
+  display: inline-block;
+  animation: 20s slide infinite linear;
 }
 
 .skills__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  display: inline;
+  position: relative;
+
 }
+
+.skills__item span{
+  position: absolute;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secundary-color);
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
 
 .skills__logo {
   zoom: 4;
   fill: var(--secundary-color);
+  margin: 0 10px;
+  border-radius: 2px;
+  padding: 0.3rem;
 }
 
-.skills__logo:hover {
+.skills__item:hover .skills__logo {
   fill: var(--blue-hover) !important;
   transition: 0.25s;
 }
+
 /*    Proyects    */
 
 .proyects {
@@ -780,7 +829,7 @@ button span {
 .contact__header__image-container-img img {
   object-fit: cover;
 }
-.contact__details{
+.contact__details {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -789,11 +838,11 @@ button span {
   padding-top: calc(3rem + 3vw);
   padding-right: calc(3rem + 3vw);
 }
-.contact__details h4{
+.contact__details h4 {
   color: var(--secundary-color);
 }
 
-.contact__details ul{
+.contact__details ul {
   display: flex;
   justify-content: center;
   align-items: start;
@@ -866,65 +915,61 @@ button span {
   }
 }
 
-@media (max-width:1115px) {
-  .contact__header__image-container{
+@media (max-width: 1115px) {
+  .contact__header__image-container {
     right: -100px;
   }
 }
-@media (max-width:950px) {
-  .contact__header__image-container{
+@media (max-width: 950px) {
+  .contact__header__image-container {
     right: -50px;
     width: 200px;
     top: -20px;
-  height: 300px;
+    height: 300px;
   }
-  .contact__details{
+  .contact__details {
     padding-top: calc(5rem);
     padding-right: calc(0rem);
-    justify-content:start;
+    justify-content: start;
   }
-
 }
 
-@media (max-width:650px) {
-  .contact__form-container{
+@media (max-width: 650px) {
+  .contact__form-container {
     flex-direction: column-reverse;
   }
-  .contact__details{
+  .contact__details {
     padding: 0;
     padding-bottom: 2rem;
   }
-  .contact__header__image-container{
+  .contact__header__image-container {
     top: 220px;
     width: 200px;
     height: 250px;
     right: 0px;
   }
-  h2{
+  h2 {
     padding-bottom: 0;
   }
 }
 
-@media (max-width:500px) {
-  .contact__header__image-container{
+@media (max-width: 500px) {
+  .contact__header__image-container {
     width: 150px;
     height: 200px;
     top: 250px;
     right: -20px;
-}
-.contact__header__image-container-img{
-  width: 120%;
-}
+  }
+  .contact__header__image-container-img {
+    width: 120%;
+  }
 }
 
-@media (max-width:400px) {
+@media (max-width: 400px) {
   .contact__header__image-container {
     display: none;
   }
-
 }
-
-
 
 /*     FOOTER    */
 

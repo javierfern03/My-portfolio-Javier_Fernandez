@@ -61,7 +61,7 @@ const SliderComponent = () => {
 
       <div className="proyects__item">
         <CardProyects
-          imgProyect="\weather-app.webp"
+          imgProyect="/weather-app.jpg"
           title={"Wheather App"}
           urlGithubLink={"https://github.com/javierfern03/Weather-app"}
           urlPageLink={"https://weather-app-react-v1.netlify.app/"}

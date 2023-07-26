@@ -199,7 +199,7 @@ function App() {
             </section>
 
             {/*    Skills    */}
-            <div className="stripe"></div>
+            {/* <div className="stripe"></div> */}
 
             <section id="skills" className="section Skills">
               <div className="skills__container">
@@ -228,9 +228,35 @@ function App() {
                   <span>TailwindCss</span>
                 </div>
               </div>
+              <div className="skills__container">
+                <div className="skills__item">
+                  <HtmlSvg fill="red" className="skills__logo" />
+                  <span>HTML</span>
+                </div>
+                <div className="skills__item">
+                  <CssSvg fill="#337CC9" className="skills__logo" />
+                  <span>CSS</span>
+                </div>
+                <div className="skills__item">
+                  <JavaScriptSvg fill="red" className="skills__logo" />
+                  <span>JavaScript</span>
+                </div>
+                <div className="skills__item">
+                  <NodeSvg fill="red" className="skills__logo" />
+                  <span>NodeJs</span>
+                </div>
+                <div className="skills__item">
+                  <ReactSvg fill="red" className="skills__logo" />
+                  <span>React</span>
+                </div>
+                <div className="skills__item">
+                  <TailwindSvg fill="red" className="skills__logo" />
+                  <span>TailwindCss</span>
+                </div>
+              </div>
             </section>
 
-            <div className="stripe"></div>
+            {/* <div className="stripe"></div> */}
 
             {/*  PROYECT   */}
             <section id="proyect " className="section proyects">
@@ -285,7 +311,7 @@ function App() {
                     <img
                       data-scroll
                       data-scroll-speed="-2"
-                      src="/altumcode-PNbDkQ2DDgM-unsplash.jpg"
+                      src="/home-office.jpg"
                       alt="Home office image"
                     />
                   </div>
